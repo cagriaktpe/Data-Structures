@@ -1,17 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        int[] intArray = new int[7];
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("Jane", "Jone", 123));
+        employeeList.add(new Employee("John", "Doe", 4567));
+        employeeList.add(new Employee("Mary", "Smith", 22));
+        employeeList.add(new Employee("Mike", "Wilson", 3245));
 
-        intArray[0] = 20;
-        intArray[1] = 35;
-        intArray[2] = -15;
-        intArray[3] = 7;
-        intArray[4] = 55;
-        intArray[5] = 1;
-        intArray[6] = -22;
-
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.println(intArray[i]);
+        employeeList.forEach(employee -> System.out.println(employee));
+        System.out.println("======================================================");
+        System.out.println(employeeList.get(1));
+        System.out.println("======================================================");
+        System.out.println(employeeList.isEmpty());
+        System.out.println("======================================================");
+        employeeList.set(1, new Employee("Frank","Castle", 31));
+        employeeList.forEach(employee -> System.out.println(employee));
+        System.out.println("======================================================");
+        System.out.println("Size of employeeList is " + employeeList.size());
+        System.out.println("======================================================");
+        employeeList.add(3, new Employee("John", "Doe", 412));
+        employeeList.forEach(employee -> System.out.println(employee));
+        System.out.println("======================================================");
+        Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
+        for (Employee employee: employeeArray) {
+            System.out.println(employee);
         }
+        System.out.println("=======================================================");
+        System.out.println(employeeList.contains(new Employee("Mary", "Smith", 22)));
+        System.out.println(employeeList.indexOf(new Employee("Frank", "Castle", 31)));
+        System.out.println("=======================================================");
+        employeeList.remove(2);
+        employeeList.forEach(employee -> System.out.println(employee));
     }
 }
