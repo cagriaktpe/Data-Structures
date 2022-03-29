@@ -1,3 +1,5 @@
+package com.sametcagriaktepe;
+
 import java.util.Objects;
 
 public class Employee {
@@ -43,7 +45,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "com.sametcagriaktepe.Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
