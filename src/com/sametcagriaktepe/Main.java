@@ -4,7 +4,6 @@ package com.sametcagriaktepe;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayStack stack = new ArrayStack(4);
 
         Employee janeJones = new Employee("Jane", "Jone", 1);
         Employee frankCastle = new Employee("Frank", "Castle", 2);
@@ -13,21 +12,19 @@ public class Main {
         Employee donaldTrump = new Employee("Donald", "Trump", 5);
         Employee joeBiden = new Employee("Joe", "Biden", 7);
 
+        LinkedStack stack = new LinkedStack();
+
         stack.push(janeJones);
         stack.push(frankCastle);
-        stack.push(georgeWashington);
-        stack.push(barackObama);
-        stack.push(donaldTrump);
         stack.push(joeBiden);
 
         stack.printStack();
 
-        System.out.println("===================================");
+        System.out.println("====================");
 
         stack.pop();
+
         stack.printStack();
 
-        System.out.println("====================================");
-        System.out.println(stack.size());
     }
 }
