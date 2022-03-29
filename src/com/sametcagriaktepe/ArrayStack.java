@@ -22,6 +22,7 @@ public class ArrayStack {
             stack = newArray;
         }
         stack[top++] = employee;
+
     }
 
     public Employee pop() {
