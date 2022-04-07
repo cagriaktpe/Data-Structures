@@ -12,23 +12,20 @@ public class Main {
         Employee donaldTrump = new Employee("Donald", "Trump", 5);
         Employee joeBiden = new Employee("Joe", "Biden", 7);
 
-        ArrayQueue queue = new ArrayQueue(10);
+        ArrayQueue queue = new ArrayQueue(5);
 
         queue.add(janeJones);
         queue.add(frankCastle);
-        queue.add(georgeWashington);
-        queue.add(barackObama);
-        queue.add(donaldTrump);
-        queue.add(joeBiden);
+        queue.remove(); //
+        queue.add(georgeWashington); //
+        queue.remove(); //
+        queue.add(barackObama); //
+        queue.remove(); //
+        queue.add(donaldTrump); //
+        queue.remove(); //
+        queue.add(janeJones);
 
         queue.printQueue();
-
-        System.out.println("====================");
-        queue.remove();
-        queue.printQueue();
-
-        System.out.println("====================");
-        System.out.println(queue.peek());
 
     }
 }
